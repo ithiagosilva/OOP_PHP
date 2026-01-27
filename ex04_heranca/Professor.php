@@ -1,0 +1,29 @@
+<?php
+require_once 'Pessoa.php';
+
+class Professor extends Pessoa {
+    private string $especialidade;
+    private float $salario;
+
+    public function receberAumento($aumento) {
+        $this->setSalario($this->salario += $aumento);
+        
+    }
+
+
+    public function getEspecialidade() {
+        return $this->especialidade;
+    }
+    public function setEspecialidade($especialidade) {
+        $this->especialidade = $especialidade;
+        return;
+    }
+    public function getSalario() {
+        return $this->salario;
+    }
+    public function setSalario($salario) {
+        $this->salario = $salario;
+        return;
+    }
+    
+}
